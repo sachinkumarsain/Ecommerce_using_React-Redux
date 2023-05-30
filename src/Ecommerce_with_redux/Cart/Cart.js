@@ -1,10 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import "./Cart.css"
 
 function Cart() {
     const CartStore=useSelector((state)=>{
         return state.ecommerce
     })
+   
   return (
    <>
    <section>
@@ -14,8 +16,11 @@ function Cart() {
             return(
                 <div className='productBox'>
                     <img src={CartProduct.image}></img>
-                    <h2></h2>
-                    <h3></h3>
+                   <div className='other'>
+                   <h2>{CartProduct.title}</h2>
+                    <h3>{CartProduct.price}</h3>
+                    <p>{CartProduct.description}</p>
+                   </div>
                     
                 </div>
             )

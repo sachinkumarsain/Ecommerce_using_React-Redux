@@ -8,7 +8,7 @@ export const fetchData = createAsyncThunk("FatchEcommerceData", async () => {
 export const ecommerceSlice = createSlice({
     name: "ecommerce",
     initialState: {
-        cart:[],
+        cart:localStorage.getItem("product")===null?[]:JSON.parse(localStorage.getItem("product")),
         products: [],
         isLodings: false,
         isError: false
@@ -18,6 +18,7 @@ export const ecommerceSlice = createSlice({
             state.cart=[...state.cart,action.payload]
             console.log(state.cart)
         }
+
 
     
     },

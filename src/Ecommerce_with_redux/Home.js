@@ -12,7 +12,8 @@ function Home() {
   })
   useEffect(() => {
     dispatch(fetchData())
-  }, [dispatch])
+    localStorage.setItem("product",JSON.stringify(inti.cart))
+  },[inti.cart])
   console.log(fetchData)
 
   function trimDescrip(desc) {
@@ -30,7 +31,11 @@ function Home() {
     dispatch(setCart(id))
   }
   function exitInCart (product){
-    // dispatch(setExitInCart())
+    let exit=false;
+    inti.cart.forEach((e)=>{
+      if(e.id===product)exit=true
+    })
+    return exit
   }
 
   console.log(inti.cart)
