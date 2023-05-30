@@ -48,7 +48,7 @@ function Home() {
                 <h2><CurrencyRupeeIcon />{items.price}</h2>
                 <p className='description'>{trimDescrip(items.description)}</p>
                 {
-                  (exitInCart(items.id))? (<a href='' className='addedToCart'>Added To Cart</a>):(<a href='' className='add to cart' onClick={(e)=>handleToCart(e, index)}>Add To Cart</a>)
+                  (exitInCart(items.id))? (<a href='' className='addedToCart'>Added To Cart</a>):(<a href='' className='add to cart' onClick={(e)=>handleToCart(e, items)}>Add To Cart</a>)
                 }
               </div>
             )

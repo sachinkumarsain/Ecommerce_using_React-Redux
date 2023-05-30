@@ -16,7 +16,9 @@ export const ecommerceSlice = createSlice({
     reducers: {
         setCart:(state,action)=>{
             state.cart=[...state.cart,action.payload]
+            console.log(state.cart)
         }
+
     
     },
     extraReducers: {
