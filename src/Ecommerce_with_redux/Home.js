@@ -37,6 +37,17 @@ function Home() {
     })
     return exit
   }
+  // function handleToCart(e, id){
+  //   e.preventDefault();
+  //   dispatch(setCart(id))
+  // }
+  // function exitInCart (product){
+  //   let exit=false;
+  //   inti.cart.forEach((e)=>{
+  //     if(e.id===product)exit=true
+  //   })
+  //   return exit
+  // }
 
   console.log(inti.cart)
 
