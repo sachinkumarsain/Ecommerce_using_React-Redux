@@ -17,6 +17,11 @@ export const ecommerceSlice = createSlice({
         setCart:(state,action)=>{
             state.cart=[...state.cart,action.payload]
             console.log(state.cart)
+        },
+        setDeleteCart:(state,action)=>{
+            if(state.cart.id!==action.payload){
+                    
+                }
         }
 
 
@@ -36,5 +41,5 @@ export const ecommerceSlice = createSlice({
         // }
     }
 })
-export const {setCart}=ecommerceSlice.actions
+export const {setCart,setDeleteCart}=ecommerceSlice.actions
 export default ecommerceSlice.reducer

@@ -1,11 +1,18 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector ,useDispatch} from 'react-redux'
+import { setDeleteCart } from '../EcommerceSlice/HomeSlice1';
 import "./Cart.css"
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 
 function Cart() {
     const CartStore=useSelector((state)=>{
         return state.ecommerce
     })
+    const dispach=useDispatch()
+    function deleteCartProduct (e,index){
+        e.preventDefault()
+         dispach(setDeleteCart())
+    }
    
   return (
    <>
@@ -18,9 +25,11 @@ function Cart() {
                     <img src={CartProduct.image}></img>
                    <div className='other'>
                    <h2>{CartProduct.title}</h2>
-                    <h3>{CartProduct.price}</h3>
+                    <h3>
+                    <CurrencyRupeeIcon />{CartProduct.price}</h3>
                     <p>{CartProduct.description}</p>
                    </div>
+                   <a href='' onClick={(e)=>deleteCartProduct(e,index)}>Clear</a>
                     
                 </div>
             )

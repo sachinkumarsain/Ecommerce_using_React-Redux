@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchData } from './EcommerceSlice/Slice1';
-import { setCart } from './EcommerceSlice/Slice1';
+import { fetchData } from './EcommerceSlice/HomeSlice1';
+import { setCart } from './EcommerceSlice/HomeSlice1';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import "./Home.css"
 
