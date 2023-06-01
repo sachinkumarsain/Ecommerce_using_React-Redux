@@ -1,5 +1,76 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.signSection,
+.signBox {
+    height: 100Vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(206, 196, 184);
+}
+
+.signBox {
+    background-color: rgb(251, 220, 179);
+    color: rgb(0, 0, 0);
+    width: 33%;
+    border-right: 30px solid rgb(107, 68, 68);
+    height: 50%;
+    border-radius: 3px;
+    position: relative;
+    text-align: center;
+    padding: 3% 1%
+}
+.signBox a{
+    position: absolute;
+    top: 10px;
+    color: white;
+    font-size: 20px;
+    right: -30px;
+}
+.signBox a .css-i4bv87-MuiSvgIcon-root{
+    font-size: 30px;
+}
+
+.ragister,.login {
+    width: 100%;
+    height: 100%;
+
+}
+
+.ragister h1,.login h1 {
+    font-size: 40px;
+    margin-bottom: 3%;
+}
+
+.ragister input,
+.ragister label,
+.ragister button ,.login input,
+.login label,
+.login button{
+    margin: 2% 0;
+    font-size: 20px;
+}
+
+.ragister input,.login input {
+    border-radius: 20px;
+    border: none;
+    padding: 1% 2%;
+}
+
+.ragister label ,.login label{
+    margin-right: 10px;
+}
+
+.ragister button ,.login button{
+    padding: 6px 25px;
+    border: none;
+    color: white;
+    margin-top: 3%;
+    background: linear-gradient(to right, #151d25, #b2c3cf);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }

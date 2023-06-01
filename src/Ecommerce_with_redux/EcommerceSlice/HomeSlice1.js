@@ -11,7 +11,8 @@ export const ecommerceSlice = createSlice({
         cart:localStorage.getItem("product")===null?[]:JSON.parse(localStorage.getItem("product")),
         products: [],
         isLodings: false,
-        isError: false
+        isError: false,
+        singFormChange:false
     },
     reducers: {
         setCart:(state,action)=>{
@@ -22,7 +23,17 @@ export const ecommerceSlice = createSlice({
             if(state.cart.id!==action.payload){
                     
                 }
+        },
+        setChangeForm:(state,action)=>{
+            if(state.singFormChange===false){
+                  state.singFormChange=true
+            }
+            else{
+                state.singFormChange=false
+            }
+            console.log(state.singFormChange)
         }
+       
 
 
     
@@ -41,5 +52,5 @@ export const ecommerceSlice = createSlice({
         // }
     }
 })
-export const {setCart,setDeleteCart}=ecommerceSlice.actions
+export const {setCart,setDeleteCart,setChangeForm}=ecommerceSlice.actions
 export default ecommerceSlice.reducer
