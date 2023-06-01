@@ -3,7 +3,7 @@ import Header from './Header/Header'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Home'
 import Cart from './Cart/Cart'
-import Sign from './Sign'
+import Sign from './Sign/Sign'
 
 
 function First() {
