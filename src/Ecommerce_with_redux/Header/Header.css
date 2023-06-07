@@ -17,7 +17,7 @@ header ul {
     justify-content: center;
     list-style: none;
 }
-header ul li a{
+header ul  li a{
     padding: 10px 15px;
     font-size: 18px;
     transition: all 1s ease;
@@ -26,7 +26,7 @@ header ul li a:hover{
     background-color: rgb(183, 150, 103);
     border-radius: 1px;
 }
-header ul a,h2 a{
+header ul a{
     text-decoration: none;
     color: black;
 }
@@ -35,4 +35,10 @@ span{
   padding: 10px 22px;
   border-radius: 50%;
   margin-left: 10px;
+}
+header ul:last-of-type li:last-of-type a:hover{
+    background: none;
+}
+header ul:last-of-type li:last-of-type a{
+    font-size: 24px;
 }

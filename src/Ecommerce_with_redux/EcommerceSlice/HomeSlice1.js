@@ -19,6 +19,8 @@ export const ecommerceSlice = createSlice({
             state.cart=[...state.cart,action.payload]
             console.log(state.cart)
         },
+       
+
         setDeleteCart:(state,action)=>{
             if(state.cart.id!==action.payload){
                     

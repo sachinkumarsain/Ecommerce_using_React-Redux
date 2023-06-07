@@ -20,7 +20,7 @@ function Sign() {
     <>
     <section className='signSection'>
       <div className='signBox'>
-      <form className='ragister' style={{display: (signChange===true) ? "block" : "none"}}>
+      <form className='ragister' style={{left:(signChange.singFormChange===true) ? "0": "100%"}}>
         <h1>Ragister</h1>
         <label>Username</label>
         <input type='text' placeholder='Enter Username'></input>
@@ -30,8 +30,8 @@ function Sign() {
        <button type='submit'>Submit</button>
            
       </form>
-      <form className='login' style={{display:(signChange===false)?"block":"none"}}>
-        <h1>Ligin</h1>
+      <form className='login' style={{left:(signChange.singFormChange===false)?"0":"-100%"}}>
+        <h1>Login</h1>
         <label>Username</label>
         <input type='text' placeholder='Enter Username'></input>
        <br/>
