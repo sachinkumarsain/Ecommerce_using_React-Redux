@@ -3,7 +3,7 @@ import { useSelector ,useDispatch} from 'react-redux'
 import { setDeleteCart } from '../EcommerceSlice/HomeSlice1';
 import "./Cart.css"
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-
+import DeleteIcon from '@mui/icons-material/Delete';
 function Cart() {
     const CartStore=useSelector((state)=>{
         return state.ecommerce
@@ -29,7 +29,7 @@ function Cart() {
                     <CurrencyRupeeIcon />{CartProduct.price}</h3>
                     <p>{CartProduct.description}</p>
                    </div>
-                   <a href='' onClick={(e)=>deleteCartProduct(e,index)}>Clear</a>
+                   <a href='' onClick={(e)=>deleteCartProduct(e,index)}><DeleteIcon/></a>
                     
                 </div>
             )

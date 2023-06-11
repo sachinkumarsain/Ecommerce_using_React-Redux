@@ -25,10 +25,13 @@ function Sign() {
         <label>Username</label>
         <input type='text' placeholder='Enter Username'></input>
        <br/>
-       <label>Password</label>
-       <input type='text'placeholder='Password'></input><br/>
-       <button type='submit'>Submit</button>
+       <label> New Password</label>
+       <input type='text'placeholder='New Password'></input><br/>
+       <label>Confirm Password</label>
+       <input type='text'placeholder='Confirm Password'></input><br/>
            
+       <button type='submit'>Submit</button>
+      
       </form>
       <form className='login' style={{left:(signChange.singFormChange===false)?"0":"-100%"}}>
         <h1>Login</h1>
@@ -37,6 +40,8 @@ function Sign() {
        <br/>
        <label>Password</label>
        <input type='text'placeholder='Password'></input><br/>
+     
+
        <button type='submit'>Submit</button>
       </form>
       <a onClick={(e)=>
