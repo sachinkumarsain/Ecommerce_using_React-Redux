@@ -8,44 +8,44 @@ export const fetchData = createAsyncThunk("FatchEcommerceData", async () => {
 export const ecommerceSlice = createSlice({
     name: "ecommerce",
     initialState: {
-        cart:localStorage.getItem("product")===null?[]:JSON.parse(localStorage.getItem("product")),
+        cart: localStorage.getItem("product") === null ? [] : JSON.parse(localStorage.getItem("product")),
         products: [],
         isLodings: false,
         isError: false,
-        singFormChange:false
+        singFormChange: false
     },
     reducers: {
-        setCart:(state,action)=>{
-            state.cart=[...state.cart,action.payload]
+        setCart: (state, action) => {
+            state.cart = [...state.cart, action.payload]
             console.log(state.cart)
         },
-       
 
-        setDeleteCart:(state,action)=>{
-            if(state.cart.id!==action.payload){
-                    
-                }
-        },
-        setChangeForm:(state,action)=>{
-            if(state.singFormChange===false){
-                  state.singFormChange=true
+
+        setDeleteCart: (state, action) => {
+            if (state.cart.id !== action.payload) {
+
             }
-            else{
-                state.singFormChange=false
+        },
+        setChangeForm: (state, action) => {
+            if (state.singFormChange === false) {
+                state.singFormChange = true
+            }
+            else {
+                state.singFormChange = false
             }
             console.log(state.singFormChange)
         }
-       
 
 
-    
+
+
     },
     extraReducers: {
         [fetchData.pending]: (state) => {
             state.isLodings = true;
         },
         [fetchData.fulfilled]: (state, action) => {
-            state.isLodings=false;
+            state.isLodings = false;
             state.products = action.payload;
 
         }
@@ -54,5 +54,5 @@ export const ecommerceSlice = createSlice({
         // }
     }
 })
-export const {setCart,setDeleteCart,setChangeForm}=ecommerceSlice.actions
+export const { setCart, setDeleteCart, setChangeForm } = ecommerceSlice.actions
 export default ecommerceSlice.reducer

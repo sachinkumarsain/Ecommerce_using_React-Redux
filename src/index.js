@@ -6,10 +6,11 @@ import Store from './Ecommerce_with_redux/Store';
 // import Header from './Ecommerce_with_redux/Header/Header';
 import First from './Ecommerce_with_redux/First';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+console.log("Hello")
 root.render(
  <Provider store={Store}>
-   <First/>
-   
+   {/* <h1>Testing</h1>  */}
+   <First />   
  </Provider>
 );
 

@@ -1,15 +1,20 @@
 import React from 'react'
 import Header from './Header/Header'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './Home/Home.js'
+import Home from "./Home/Home"
 import Cart from './Cart/Cart'
 import Sign from './Sign/Sign'
-import Footer from './Footer/Footer'
+// import Footer from "./Footer/Footer"
 
 
-function First() {
+function First() { 
     return (
         <>
+        {/* <Home/> 
+        <Sign/>
+        <Cart/>  */}
+        {/* <Header/> */}
+
             <BrowserRouter>
                 <Header />
                 <Routes>
@@ -17,8 +22,8 @@ function First() {
                     <Route path='/cart' element={<Cart/>}></Route>
                     <Route path='/sign' element={<Sign/>}></Route>
                 </Routes>
-                <Footer/>
-            </BrowserRouter>
+                {/* <Footer/> */}
+            </BrowserRouter>               
         </>
     )
 }
