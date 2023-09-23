@@ -4,4 +4,4 @@ import  ecommerceSliceReducer from "./EcommerceSlice/HomeSlice1";
     reducer:{
       ecommerce:ecommerceSliceReducer
     }
- })
+ }) 

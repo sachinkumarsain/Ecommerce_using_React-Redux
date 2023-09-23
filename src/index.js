@@ -9,9 +9,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 console.log("Hello")
 root.render(
  <Provider store={Store}>
-   {/* <h1>Testing</h1>  */}
+   {/* <h1>Testing</h1>  */} 
    <First />   
- </Provider>
+ </Provider>  
 );
 
 

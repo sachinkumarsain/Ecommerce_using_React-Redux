@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+  import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchData } from '../EcommerceSlice/HomeSlice1';
 import { setCart } from '../EcommerceSlice/HomeSlice1';

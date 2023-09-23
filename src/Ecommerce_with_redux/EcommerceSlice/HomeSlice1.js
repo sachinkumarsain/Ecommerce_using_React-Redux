@@ -48,10 +48,10 @@ export const ecommerceSlice = createSlice({
             state.isLodings = false;
             state.products = action.payload;
 
-        }
-        // [fetchData.rejected]:(state,action)=>{
-        //     state.isError=true
-        // }
+        },
+        [fetchData.rejected]:(state,action)=>{
+            state.isError=true
+        }   
     }
 })
 export const { setCart, setDeleteCart, setChangeForm } = ecommerceSlice.actions

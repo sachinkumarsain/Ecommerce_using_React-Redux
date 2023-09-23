@@ -3,9 +3,9 @@ import React from 'react'
 function Footer() {
   return (
    <>
-   <Footer>
-    <h1>ram</h1>
-   </Footer>
+  <footer>
+    <h1>ihdshfi</h1>
+  </footer>
    </>
   )
 }
